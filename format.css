@@ -1,0 +1,198 @@
+body{
+    background: white;
+    color: black;
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    font-family: fantasy;
+    font-size: 16px;
+}
+
+body::after{
+    content: "";
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+hr { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    color: black;
+}
+
+
+h1{
+    font-family: fantasy;
+}
+
+a{
+    color: black;
+    font-weight: bold;
+}
+
+
+a:hover{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+hr{
+    border-color: black;
+}
+
+/** Classes **/
+
+.stars{
+    opacity: 1;
+    transition: 0.3s;
+    width: 20px;
+    height:20px;
+    color: black
+}
+
+.stars:hover{
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+.colourChunk{
+    float: left;
+    margin-right: 8px;
+    margin-left: 4px;
+    margin-top: 12px;
+    padding: 12px 12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: white;
+    background-color: lightgrey;
+    transition: 0.3s;
+}
+
+.colorblock:hover{
+    padding: 12px 12px;
+    border-style: solid;
+    border-color: lightgray;
+    cursor: pointer;
+}
+
+/** ID formats **/
+
+#heading1{
+    color: lightgray;
+}
+
+#reviews{
+    margin-left: 15%;
+    color: lightgray;
+}
+
+#star_and_review_area{
+    margin-bottom: 5%;
+}
+
+#star_span:hover{
+    cursor: default;
+}
+
+#price_span{
+    margin-top:5%;
+}
+
+#netpriceval{
+    font-size: larger;
+    color: crimson;
+    margin-right:9%;
+}
+
+#basepriceval{
+    margin-right:9%;
+    color: lightgray;
+    font-size: small;
+}
+
+#discount{
+    color: lightgrey;
+    font-size: small;
+}
+#colour_range
+{
+    padding-bottom: 10%;
+}
+
+#checkout_div{
+    position: relative;
+    padding-top: 40px;
+}
+
+#updateCartBtn{
+    padding: 10px 10%;
+    margin: 0px 20px;
+    color:green;
+    box-sizing:border-box;
+    background-color: black;
+    border-radius: 100px;
+    border-style: none;
+    font-weight: bold;
+}
+
+#quantityCount_div{
+    box-sizing:border-box;
+    border-radius: 25px;
+    margin: 0px 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    color: black;
+}
+
+#updateCartBtn{
+    padding: 8px 9.8%;
+    box-sizing:border-box;
+    margin: 0px 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    color: white;
+    background-color: black;
+    transition: 0s;
+}
+#updateCartBtn:hover {
+    background-color: rgb(41, 41, 41);
+}
+
+#agreeBtn{
+    border-color:rgb(72, 102, 69);
+    background-color: rgb(178, 243, 162);
+    color: black;
+}
+
+#cancelBtn{
+    border-color:rgb(102, 69, 69);
+    background-color: rgb(243, 162, 162);
+    color: black;
+}
+
+#minusBtn{
+    color: white;
+    border-radius: 25px;
+    background-color: black;
+}
+
+#plusBtn{
+    color: white;
+    border-radius: 25px;
+    background-color: black;
+}
