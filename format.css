@@ -90,6 +90,10 @@ hr{
 
 /** ID formats **/
 
+#pageitems{
+    min-width: 300px;
+}
+
 #heading1{
     color: lightgray;
 }
@@ -129,24 +133,15 @@ hr{
 }
 #colour_range
 {
-    padding-bottom: 10%;
+    width: 270px;
+    height: 200px;
 }
 
 #checkout_div{
     position: relative;
-    padding-top: 40px;
+    padding-top: 10px;
 }
 
-#updateCartBtn{
-    padding: 10px 10%;
-    margin: 0px 20px;
-    color:green;
-    box-sizing:border-box;
-    background-color: black;
-    border-radius: 100px;
-    border-style: none;
-    font-weight: bold;
-}
 
 #quantityCount_div{
     box-sizing:border-box;
@@ -159,18 +154,22 @@ hr{
 }
 
 #updateCartBtn{
-    padding: 8px 9.8%;
     box-sizing:border-box;
     margin: 0px 20px;
     border-width: 2px;
     border-style: solid;
     border-color: black;
     color: white;
+    border-radius: 100px;
     background-color: black;
-    transition: 0s;
 }
 #updateCartBtn:hover {
     background-color: rgb(41, 41, 41);
+}
+
+#cart_objects
+{
+    padding-bottom: 5%;
 }
 
 #agreeBtn{
@@ -195,4 +194,20 @@ hr{
     color: white;
     border-radius: 25px;
     background-color: black;
+}
+
+#helpBtn{
+    padding-bottom: 3%;
+    background-color: white;
+    border-color: white;
+    color: black;
+    border-radius: 100px;
+}
+
+#helpBtn:hover{
+    border-color: grey;
+}
+
+#ship_span{
+    padding-bottom: 4%;
 }

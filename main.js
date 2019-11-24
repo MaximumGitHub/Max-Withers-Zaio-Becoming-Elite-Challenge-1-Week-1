@@ -1,6 +1,11 @@
 var crrtPos = -1;
-var colourOptions = [ "Orange", "Yellow", "Slate Blue", "Steel Blue", "Dark Salmon", "Deep Sky Blue", "Lawn Green", "White", "Deep Pink", "Light Salmon", "Medium Sea Green", "Gray", "Brown", "Turquoise", "Light Gray", "Crimson", "Blue Violet", "Black" ];
+var colourOptions = ["Medium Sea Green", "Lawn Green",  "Yellow", "Orange", "Light Salmon", "Dark Salmon", "Crimson",
+"Blue Violet", "Deep Pink", "Slate Blue", "Steel Blue",  "Deep Sky Blue", "Turquoise", "White", "Light Gray", 
+"Gray", "Black", "Brown"];
 var colourWheel = document.getElementById("selector");
+var detailWheel = document.getElementById("cart_objects")
+
+var quantity = 0;
 
 var reset = function(a)
 {
@@ -67,3 +72,34 @@ else
     }
 }
 
+document.getElementById("updateCartBtn").addEventListener("click", function()
+{
+    document.getElementById("modal_colour").innerHTML = colourOptions[crrtPos];
+})
+
+document.getElementById("minusBtn").addEventListener("click", function()
+{
+    quantity = quantity - 1;
+    document.getElementById("counter_span").innerHTML = quantity;
+});
+
+document.getElementById("plusBtn").addEventListener("click", function()
+{
+    quantity = quantity + 1;
+    document.getElementById("counter_span").innerHTML = quantity;
+})
+
+document.getElementById("agreeBtn").addEventListener("click", function()
+{
+    document.getElementById("quantityCount_div").innerHTML = quantity;
+    document.getElementById("updateCartBtn").innerHTML = "Checkout now";
+
+    for(let i = 0; i < quantity; i++){
+        let fragment3 = create('<div id=' + '"cartItem ' + i + '" class="colourChunk d-inline" data-toggle="tooltip" data-placement="top" title="' + colourOptions[i] + '"></div>');
+        detailWheel.appendChild(fragment3);
+        document.getElementById("cartItem " + i).style.color = convertToColor(crrtPos);
+        document.getElementById("cartItem " + i).style.backgroundColor = convertToColor(crrtPos);
+    }
+
+    document.getElementById("updateCartBtn").disabled = true;
+})
