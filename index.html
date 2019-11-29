@@ -68,11 +68,14 @@
                 <div id="checkout_div">
                     <p>Size Guide</p>
                     <p>Your Custom Fit</p>
-                    <div id="buttons_div">
+                    <div id="buttons_div" class="d-inline">
                         <div id="quantityCount_div" class="d-inline btn">0</div>
                         <a id="updateCartBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#cartModal">
                                 Add to Cart
                         </a>
+                        <br/>
+                        <button id="checkoutBtn" type="button" style="display: none;" data-toggle="modal" data-target="#checkOutModal">
+                          Checkout</button>
                     </div>
                 </div>
 
@@ -96,7 +99,7 @@
 
 
 
-<!-- Checkout Modal -->
+<!-- Cart Modal -->
       <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -135,7 +138,7 @@
             <!-- Modal body -->
             <div class="modal-body" class="d-inline">
                     <span id="help_span">If you have any qestions, please send an email to the following address</span>
-                    <a id="email link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">hikkies.support@freemail.com</a>
+                    <a id="email link" href="https://www.youtube.com/watch?v=6n3pFFPSlW4">hikkies.support@freemail.com</a>
             </div>
             <div class="modal-footer">
             </div>
@@ -143,7 +146,29 @@
         </div>
       </div>
 
+<!-- Checkout Modal -->
+<div class="modal fade" id="checkOutModal" tabindex="-1" role="dialog" aria-labelledby="checkOutModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="helpModalLabel">Check Out Page</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body" class="d-inline">
+              <span id="cart_span">Items in Cart</span>
+              <div id="CheckoutModal_div">
+                <hr/>
 
+              </div> 
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

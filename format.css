@@ -163,7 +163,23 @@ hr{
     border-radius: 100px;
     background-color: black;
 }
+
 #updateCartBtn:hover {
+    background-color: rgb(41, 41, 41);
+}
+
+#checkoutBtn{
+    box-sizing:border-box;
+    margin: 0px 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    color: white;
+    border-radius: 100px;
+    background-color: black;
+}
+
+#checkoutBtn:hover {
     background-color: rgb(41, 41, 41);
 }
 
