@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html>
+
+<!-- Head of website -->
+    <head>
+
+<!-- Meta Data -->
+        <meta charset="utf-8"/>
+        <meta name="description" content="Buy HICKIES Originals on laceit.org"/>
+
+<!-- Bootstrap Library -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="format.css"/>
+    </head>
+
+<!-- Body of website -->
+    <body>
+<!-- Nav Bar of website -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+
+            <div id="heading1" class="bg-dark">
+                <h1 class="text=centre">uWu</h1>
+            </div>
+        </nav>
+
+<!-- Page of website -->
+        <div id="pageitems" class="container-fluid h-50 w-50">
+            <h1 id="hickiesheading">HICKIES Originals</h1>
+
+            <div id="stars_and_price_container">
+                <div id="star_and_review_area">
+<!-- allignment of stars with text -->
+                    <span id="stars_span">
+                            <img src="images/newstar.png" class="stars">
+                            <img src="images/newstar.png" class="stars">
+                            <img src="images/newstar.png" class="stars">
+                            <img src="images/newstar.png" class="stars">
+                            <img src="images/newstar.png" class="stars">
+                    </span>
+                    <span id="reviews" class="d-inline">
+                        <a><span id="numreviews">1,293 Reviews</span></a>
+                    </span>
+                </div>
+
+<!-- Prices CSS -->
+                <span id="price_span" class="d-inline">
+                    <p><strong><span id="netprice">
+                        <span id="netpriceval">$14.99</span>
+                        </span></strong>
+                        <span id="basepriceval">$17.99</span>
+                        <span id="discount"> 25% OFF</span>
+                    </p>
+                </span>
+                <h5 id="special">Online Exclusive</h5>
+                <div id="colorsdiv" class="d-inline">
+                    <p id="colour_special">
+                        <strong> COLOUR: </strong>
+                        <span id="colour_selected"></span>
+                    </p>                    
+                </div>
+
+<!-- Colour selection. Code done in java script -->
+                <div id="colour_range" >
+                    <div id="selector" class="container overflow-auto"></div>
+                </div>
+
+                <div id="checkout_div">
+                    <p>Size Guide</p>
+                    <p>Your Custom Fit</p>
+                    <div id="buttons_div" class="d-inline">
+                        <div id="quantityCount_div" class="d-inline btn">0</div>
+                        <a id="updateCartBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#cartModal">
+                                Add to Cart
+                        </a>
+                        <br/>
+                        <button id="checkoutBtn" type="button" style="display: none;" data-toggle="modal" data-target="#checkOutModal">
+                          Checkout</button>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <hr/>
+                <div id="details_div">
+                    <strong>DETAILS</strong>
+                    <div id="cart_objects"></div>
+                    <br/>
+                </div>
+                <hr/>
+                <!-- Support -->
+                <div id="support_div">
+                    <button id="helpBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#helpModal">Need Help?</button>
+                <br/>
+                    <span id="ship_span">Shipping and Returns</span>
+                </div>
+
+            </div>
+        </div>
+
+
+
+<!-- Cart Modal -->
+      <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cartModalLabel">Please add the quantity of the item you have selected</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body" class="d-inline">
+                    <span id="modal_colour"></span>
+                    <button id="minusBtn" type="button" class="btn btn-primary">-</button>
+                    <span id="counter_span">0</span>
+                    <button id="plusBtn" type="button" class="btn btn-primary">+</button>
+                
+            </div>
+            <div class="modal-footer">
+              <button id="agreeBtn" type="button" class="btn btn-primary" data-dismiss="modal">Agree</button>
+              <button id="cancelBtn" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Help Modal -->
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="helpModalLabel">Help Page</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body" class="d-inline">
+                    <span id="help_span">If you have any qestions, please send an email to the following address</span>
+                    <a id="email link" href="https://www.youtube.com/watch?v=6n3pFFPSlW4">hikkies.support@freemail.com</a>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Checkout Modal -->
+<div class="modal fade" id="checkOutModal" tabindex="-1" role="dialog" aria-labelledby="checkOutModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="helpModalLabel">Check Out Page</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body" class="d-inline">
+              <span id="cart_span">Items in Cart</span>
+              <div id="CheckoutModal_div">
+                <hr/>
+
+              </div> 
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="main.js" type="application/javascript"></script>
+        <script>
+                $(document).ready(function() { 
+                    $('[data-toggle="tooltip"]').tooltip();
+                })
+        </script>
+    </body>
+
+</html>
