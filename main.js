@@ -176,7 +176,7 @@ document.getElementById("plusBtn").addEventListener("click", function()
 })
 
 
-//updates the quantity of the selected item then displays a number of coloured circles equal to the selected quantity
+//updates the quantity of the selected item then displays a number of coloured circles equahe selected quantity
 document.getElementById("agreeBtn").addEventListener("click", function()
 {
     document.getElementById("cart_objects").innerHTML = "";
@@ -198,23 +198,33 @@ document.getElementById("agreeBtn").addEventListener("click", function()
     quantity = 0;
 
 })
-
+//calls the cheout modal and displays the unit cost of each shoe as well as the total. 
 document.getElementById("checkoutBtn").addEventListener("click",function()
 {
     document.getElementById("checkoutCart_div").innerHTML = "";
 
+    let tempTotal = "";
+    let total = 0;
     for(let i = 0; i < cartArr.length; i++){
         let fragment4 = create('<div id=' + '"checkoutItem ' + i + '" class="colourChunk d-inline" data-toggle="tooltip" data-placement="top" title="' + colourOptions[i] + '"></div>');
         checkoutCart.appendChild(fragment4);
         document.getElementById("checkoutItem " + i).style.color = convertToColor(cartArr[i].colour);
         document.getElementById("checkoutItem " + i).style.backgroundColor = convertToColor(cartArr[i].colour);
+        tempTotal = tempTotal + "$" + cartArr[i].price + "+ <br>";
+        total = total + cartArr[i].price;
     }
+    total = total*100;
+    total = Math.round(total);
+    total = total/100;
+    tempTotal = tempTotal + " = $" + total;
+    document.getElementById("total_div").innerHTML = tempTotal;
 
 })
-
+//this button resets all stored values as if the user was  actually paying for everything in their cart.
 document.getElementById("paymentBtn").addEventListener("click",function(){
     document.getElementById("cart_objects").innerHTML = "";
     document.getElementById("quantityCount_div").innerHTML = "0";
     document.getElementById("checkoutBtn").style.display = "none";
+    cartArr = [];
 })
 
