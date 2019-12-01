@@ -4,6 +4,7 @@ var colourOptions = ["Medium Sea Green", "Lawn Green",  "Yellow", "Orange", "Lig
 "Gray", "Black", "Brown"];
 var colourWheel = document.getElementById("selector");
 var detailWheel = document.getElementById("cart_objects")
+var checkoutCart = document.getElementById("checkoutCart_div");
 var cartArr=[];
 
 
@@ -33,7 +34,7 @@ var cartArr=[];
     };
     shoeCrimson = {
         colour : "Crimson",
-        price : "$14.99"
+        price : 14.99
     };
     shoeBlueViolet = {
         colour : "Blue Violet",
@@ -174,6 +175,8 @@ document.getElementById("plusBtn").addEventListener("click", function()
     document.getElementById("counter_span").innerHTML = quantity;
 })
 
+
+//updates the quantity of the selected item then displays a number of coloured circles equal to the selected quantity
 document.getElementById("agreeBtn").addEventListener("click", function()
 {
     document.getElementById("cart_objects").innerHTML = "";
@@ -192,6 +195,26 @@ document.getElementById("agreeBtn").addEventListener("click", function()
     }
 
     document.getElementById("checkoutBtn").style.display = "block";
+    quantity = 0;
 
+})
+
+document.getElementById("checkoutBtn").addEventListener("click",function()
+{
+    document.getElementById("checkoutCart_div").innerHTML = "";
+
+    for(let i = 0; i < cartArr.length; i++){
+        let fragment4 = create('<div id=' + '"checkoutItem ' + i + '" class="colourChunk d-inline" data-toggle="tooltip" data-placement="top" title="' + colourOptions[i] + '"></div>');
+        checkoutCart.appendChild(fragment4);
+        document.getElementById("checkoutItem " + i).style.color = convertToColor(cartArr[i].colour);
+        document.getElementById("checkoutItem " + i).style.backgroundColor = convertToColor(cartArr[i].colour);
+    }
+
+})
+
+document.getElementById("paymentBtn").addEventListener("click",function(){
+    document.getElementById("cart_objects").innerHTML = "";
+    document.getElementById("quantityCount_div").innerHTML = "0";
+    document.getElementById("checkoutBtn").style.display = "none";
 })
 

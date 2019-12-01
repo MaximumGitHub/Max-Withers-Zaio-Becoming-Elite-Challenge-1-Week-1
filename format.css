@@ -142,6 +142,10 @@ hr{
     padding-top: 10px;
 }
 
+#buttons_div{
+    min-width: 150;
+}
+
 
 #quantityCount_div{
     box-sizing:border-box;

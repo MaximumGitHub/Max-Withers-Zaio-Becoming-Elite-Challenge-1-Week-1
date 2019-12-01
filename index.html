@@ -74,15 +74,15 @@
                                 Add to Cart
                         </a>
                         <br/>
-                        <button id="checkoutBtn" type="button" style="display: none;" data-toggle="modal" data-target="#checkOutModal">
-                          Checkout</button>
                     </div>
                 </div>
 
                 <!-- Details -->
                 <hr/>
-                <div id="details_div">
+                <div id="details_div" class="d-inline btn">
                     <strong>DETAILS</strong>
+                    <button id="checkoutBtn" type="button" style="display: none;" data-toggle="modal" data-target="#checkOutModal">
+                        Checkout</button>
                     <div id="cart_objects"></div>
                     <br/>
                 </div>
@@ -161,10 +161,15 @@
               <span id="cart_span">Items in Cart</span>
               <div id="CheckoutModal_div">
                 <hr/>
+                <div id="cartDetailsDiv">
+                  <span>Details</span>
+                  <div id="checkoutCart_div"></div>
+                </div>
 
               </div> 
       </div>
       <div class="modal-footer">
+          <button id="paymentBtn" type="button" class="btn btn-primary" data-dismiss="modal">Pay</button>
       </div>
     </div>
   </div>
