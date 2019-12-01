@@ -34,7 +34,7 @@ var cartArr=[];
     };
     shoeCrimson = {
         colour : "Crimson",
-        price : 14.99
+        price : 11.11
     };
     shoeBlueViolet = {
         colour : "Blue Violet",
